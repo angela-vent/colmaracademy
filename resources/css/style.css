@@ -1,0 +1,282 @@
+
+
+html{
+  font-family: serif;
+  font-size: 16px;
+}
+
+.container {
+  position: relative;
+  top: 4rem; /* To offset for fixed header. */
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*.center {
+  text-align: center;
+}*/
+
+/*.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}*/
+
+.video-container{
+  width: 100%;
+}
+
+.video-container video{
+  max-width: 100%;
+  height: auto;
+}
+
+/*@media only screen and (max-width: 760px) {
+  .desktop {
+    display: none;
+  }
+
+@media only screen and (min-width: 760px) {
+  .mobile {
+    display: none;
+  }*/
+
+/* -- HEADER -- */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 20;
+/*}
+
+header .content {*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+header .logo {
+  flex: 1;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  text-decoration: none;
+  line-height: 1.6;
+  font-size: 1rem;
+  /*color: ;*/
+}
+
+/*header .icon {
+  width: 1rem;
+  padding-left: .75rem;
+}*/
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  /*header .mobile {
+    display: block;
+    width: 100%;
+  }*/
+
+  header .mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    padding: 1.5rem;
+  }
+
+}
+
+/* -- BANNER -- */
+
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  padding: 2.0rem 1.5rem;
+}
+.banner image-container{
+  width: 50%;
+  /*height: 100px;*/
+  overflow: hidden;
+}
+
+.banner image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner .content{
+  margin-left: 2.5rem;
+}
+
+.banner p{
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.banner .button {
+  /*border-radius: 4px;*/
+  background-color: #4a4a4a;
+  color: white;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.banner .button a{
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 760px) {
+  .banner .desktop {
+    display: none;
+  }
+
+  .banner .content{
+    margin-top: 4rem;
+    padding: 2.0rem 1.0rem;
+  }
+
+  .banner .content p{
+    padding-top: 2.0rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* -- INFO -- */
+
+.info{
+  display: flex;
+}
+
+.info .main{
+  width: 50%;
+  margin: 2rem 1.5rem;
+}
+
+.info .main .image-container{
+  width: 50%;
+  /*height: ;*/
+  overflow: hidden;
+}
+
+.info .main .image-container{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info .main .content p{
+  padding-top: 1.5rem;
+  padding-bottom: 2.0rem;
+}
+
+.info .secondary{
+  display: flex;
+  flex-direction: column;
+  width: 50%; /*26.44rem*/
+  height: auto;
+}
+
+.info .secondary .mobile{
+  display: none;
+}
+
+.info .secondary .orientation,
+.info .secondary .campus,
+.info .secondary .lecture{
+  display: flex;
+  max-height: 33%;
+  align-items: center;
+}
+
+.info .secondary .image-container{
+  width: 32%;
+  /*height: ;*/
+  overflow: hidden;
+}
+
+.info .secondary .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info .secondary .container{
+  padding-left: 2.0rem;
+}
+
+.info .secondary .container .read a{
+  text-decoration: none;
+  color: lightblue;
+}
+
+@media only and screen (max-width: 760px){
+
+  .info .desktop{
+    display: none;
+  }
+
+  .info .secondary{
+    display: block;
+    margin: 1rem;
+  }
+
+  .info .secondary .image-container{
+    width: 100%;
+    /*height: ;*/
+    overflow: hidden;
+  }
+
+  .info .secondary img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .info .secondary .container{
+    padding-left: 1rem;
+  }
+
+}
+
+/* -- FOOTER --  */
+
+footer{
+  position: relative;
+  top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 3.0rem 1.5rem;
+}
+
+footer nav a{
+  text-decoration: none;
+}
