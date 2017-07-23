@@ -13,28 +13,6 @@ html{
   overflow: hidden;
 }
 
-/*.center {
-  text-align: center;
-}*/
-
-/*.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-}*/
-
-/*@media only screen and (max-width: 760px) {
-  .desktop {
-    display: none;
-  }
-
-@media only screen and (min-width: 760px) {
-  .mobile {
-    display: none;
-  }*/
-
 /* -- HEADER -- */
 
 header {
@@ -43,9 +21,6 @@ header {
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
   z-index: 20;
-/*}
-
-header .content {*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,11 +47,6 @@ nav a {
   /*color: ;*/
 }
 
-/*header .icon {
-  width: 1rem;
-  padding-left: .75rem;
-}*/
-
 header .mobile {
   display: none;
 }
@@ -86,18 +56,18 @@ header .mobile {
     display: none;
   }
 
-  /*header .mobile {
-    display: block;
-    width: 100%;
-  }*/
-
   header .mobile {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /*IT DOESN'T WORK!? */
     align-items: center;
     width: 100%;
     height: 4rem;
-    padding: 1.5rem;
+    /*padding: 1.5rem;*/
+    margin: 1.5rem auto;
+  }
+
+  header .mobile a{
+
   }
 
 }
@@ -257,28 +227,33 @@ header .mobile {
     display: none;
   }
 
+  .info .mobile{
+    display: block; /*imgs non shown, why?? */
+  }
+
   .info .right-column{
     display: block;
     margin: 1rem;
   }
 
-  .info .right-column .image-container{
+  .info .right-column .mobile .image-container{
     width: 100%;
     /*height: ;*/
     overflow: hidden;
   }
 
-  .info .right-column .image-container{
-    display: none;
-  }
-
-  .info .right-column img{
+  .info .right-column .mobile img{
     max-width: 100%;
     height: auto;
     display: block;
   }
 
   .info .right-column .container{
+    padding-left: 1rem;
+  }
+
+  .info .right-column .right-item:last-child{
+    background-color: white;
     padding-left: 1rem;
   }
 
@@ -333,12 +308,20 @@ header .mobile {
 
 @media only screen and (max-width: 760px){
 
+  .course{
+    background-color: white;
+  }
+
   .course .desktop{
     display: none;
   }
 
   .course .table{
     display: block;
+  }
+
+  .course .table .image-container{
+    display: none;
   }
 
   .course .table .square{
@@ -349,7 +332,7 @@ header .mobile {
 
   .course .table .square .content{
     padding: 1.0rem;
-    margin: 0.5rem;
+    margin: 0rem; /* it doesn't work?? */
   }
 
 }
