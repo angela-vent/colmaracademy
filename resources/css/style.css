@@ -121,7 +121,7 @@ header .mobile {
   padding: 2.0rem 1.5rem;
 }
 .banner image-container{
-  width: 50%;
+  width: 60%;
   /*height: 100px;*/
   overflow: hidden;
 }
@@ -134,6 +134,7 @@ header .mobile {
 
 .banner .content{
   margin-left: 2.5rem;
+  width: 40%;
 }
 
 .banner p{
@@ -156,6 +157,7 @@ header .mobile {
 }
 
 @media only screen and (max-width: 760px) {
+
   .banner .desktop {
     display: none;
   }
@@ -169,6 +171,8 @@ header .mobile {
     padding-top: 2.0rem;
     padding-bottom: 1.5rem;
   }
+
+}
 
   /* -- INFO -- */
 
@@ -198,42 +202,44 @@ header .mobile {
   padding-bottom: 2.0rem;
 }
 
-.info .secondary{
+.info .right-column{
   display: flex;
   flex-direction: column;
   width: 50%; /*26.44rem*/
   height: auto;
 }
 
-.info .secondary .mobile{
+.info .right-column .mobile{
   display: none;
 }
 
-.info .secondary .orientation,
-.info .secondary .campus,
-.info .secondary .lecture{
+.info .right-column .image-container .mobile{
+  display: none;
+}
+
+.info .right-column .right-item{
   display: flex;
   max-height: 33%;
   align-items: center;
 }
 
-.info .secondary .image-container{
+.info .right-column .image-container{
   width: 32%;
   /*height: ;*/
   overflow: hidden;
 }
 
-.info .secondary .image-container img{
+.info .right-column .image-container img{
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.info .secondary .container{
+.info .right-column .container{
   padding-left: 2.0rem;
 }
 
-.info .secondary .container .read a{
+.info .right-column .container .read a{
   text-decoration: none;
   color: lightblue;
 }
@@ -244,28 +250,91 @@ header .mobile {
     display: none;
   }
 
-  .info .secondary{
+  .info .right-column{
     display: block;
     margin: 1rem;
   }
 
-  .info .secondary .image-container{
+  .info .right-column .image-container{
     width: 100%;
     /*height: ;*/
     overflow: hidden;
   }
 
-  .info .secondary img{
+  .info .right-column .image-container{
+    display: none;
+  }
+
+  .info .right-column img{
     max-width: 100%;
     height: auto;
     display: block;
   }
 
-  .info .secondary .container{
+  .info .right-column .container{
     padding-left: 1rem;
   }
 
 }
+
+/* -- COURSE -- */
+
+.course{
+  background-color: lightgrey;
+  margin: 2.0rem auto;
+}
+
+.course h3{
+  margin: 0 auto;
+  margin: 2.0rem auto;
+}
+.course .table{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.course .table .square{
+  width: 33%;
+  height: 20rem;
+  margin: 0rem 2rem 2rem 2rem;
+}
+
+.course .table .square .image-container{
+  width: 100%;
+  height: 6rem;
+  overflow: hidden;
+}
+
+.course .table .square .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only and screen (max-width: 760px){
+
+  .course .desktop{
+    display: none;
+  }
+
+  .course .table{
+    display: block;
+  }
+
+  .course .table .square{
+    width: 100%;
+    height: 3.0rem;
+  }
+
+  .course .table .square .content{
+    padding: 1.0rem;
+    margin: 0.5rem;
+  }
+
+}
+
+/* -- THESIS -- */
 
 /* -- FOOTER --  */
 
@@ -275,6 +344,7 @@ footer{
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.5rem 3.0rem 1.5rem;
+  border-top: 0.1rem solid lightgrey;
 }
 
 footer nav a{
