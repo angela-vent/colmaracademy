@@ -19,6 +19,15 @@ h4{
   font-size: 1.5rem;
 }
 
+a{
+  transition-property: font-size;
+  transition-duration: 0.75s;
+}
+
+a:hover{
+  font-size: 1.5rem;
+}
+
 /* -- HEADER -- */
 
 header {
@@ -45,7 +54,7 @@ header .logo strong{
 
 header .logo span{
   font-family: 'Cormorant Garamond', serif;
-  color: grey;
+  color: #667380;
 }
 
 header nav ul {
@@ -92,7 +101,7 @@ header .mobile {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightgrey;
+  background-color: #c6c1c1;
   padding: 2.0rem 1.5rem;
 }
 .banner .image-container{
@@ -158,12 +167,8 @@ header .mobile {
     background-color: gray;
     color: white;
     text-align: center;
+    margin-right: 2rem;
   }
-
-  /*.banner .button a{
-    margin-top: -1.5rem;
-    margin-bottom: -1.5rem;
-  }*/
 
 }
 
@@ -181,7 +186,6 @@ header .mobile {
 
 .info .main .image-container{
   width: 100%;
-  /*height: auto;*/
   overflow: hidden;
 }
 
@@ -210,8 +214,7 @@ header .mobile {
 .info .right-column{
   display: flex;
   flex-direction: column;
-  width: 50%; /*26.44rem*/
-  /*height: auto;*/
+  width: 40%;
   padding: 1.0rem 1.0rem;
 }
 
@@ -230,25 +233,8 @@ header .mobile {
   padding: 1.0rem;
 }
 
-.info .right-column .right-item:last-child{
-  background-color: lightgrey;
-  padding-left: 1rem;
-}
-
-/*#lecture .image-container{
-  height: 100%;
-  overflow: hidden;
-}
-
-#lecture .image-container img{
-  max-height: 100%;
-  width: auto;
-  display: block;
-}*/
-
 .info .right-column .image-container{
   width: 32%;
-  /*height: ;*/
   overflow: hidden;
 }
 
@@ -258,8 +244,38 @@ header .mobile {
   display: block;
 }
 
+@media only screen and (max-width: 1000px){
+
+  #lecture .image-container{
+    height: 100%;
+    /*width: 60%;*/
+    overflow: visible;
+    flex-shrink: 0.2;
+  }
+
+  #lecture .image-container img{
+    /*max-width: 100%;
+    height: auto;*/
+    max-height: 100%;
+    width: auto;
+    display: block;
+  }
+
+}
+
+.info .right-column .right-item:last-child{
+  background-color: #c6c1c1;
+}
+
 .info .right-column .content{
   padding-left: 2.0rem;
+}
+
+#lecture .image-container{
+  /*height: 100%;*/
+  width: 35%;
+  overflow: visible;
+  flex-shrink: 0.2;
 }
 
 .info .right-column .content p{
@@ -267,10 +283,17 @@ header .mobile {
   padding-bottom: 0.5rem;
 }
 
-.info .right-column .content .read a{
+.info .right-column .content a{
   text-decoration: none;
-  color: blue;
+  color: navy;
   font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  transition-property: font-size;
+  transition-duration: 0.75s;
+}
+
+.info .right-column .content a:hover{
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 760px){
@@ -317,9 +340,11 @@ header .mobile {
 /* -- COURSE -- */
 
 .course{
-  background-color: lightgrey;
+  background-color: #c6c1c1;
   margin: 2.0rem auto;
-  margin-left: -0.5rem;
+  /*margin-left: -0.5rem;*/
+  padding-left: 0.5rem;
+
 }
 
 .course h3{
@@ -338,7 +363,7 @@ header .mobile {
 
 .course .table .square{
   width: 30%;
-  height: 20rem;
+  height: 25rem;
   margin: 0rem 1rem 2rem 1rem;
   background-color: white;
 }
@@ -358,6 +383,7 @@ header .mobile {
 .course .table .square .content{
   text-align: left;
   padding: 1.0rem;
+  padding-bottom: 2.0rem;
 }
 
 .course .table .square .content p{
@@ -371,6 +397,21 @@ header .mobile {
   font-style: italic;
 }
 
+@media only screen and (max-width: 1000px){
+
+  .course{
+    margin: 1rem auto;
+    padding-left: 2rem;
+  }
+
+  .course .table .square{
+    width: 30%;
+    height: 20rem;
+    margin: 0rem 0.5rem 1rem 0.5rem;
+    background-color: white;
+  }
+
+}
 
 @media only screen and (max-width: 760px){
 
@@ -391,14 +432,17 @@ header .mobile {
   }
 
   .course .table .square{
-    width: 100%;
+    width: 100vw;
     height: 3.0rem;
-    background-color: lightgrey;
+    background-color: #c6c1c1;
     margin: 0.25rem 1.5rem;
+    margin-right: 2.0rem;
+    margin-left: -1.0rem;
   }
 
   .course .table .square .content{
     padding: 1.0rem;
+    margin-right: 2.0rem;
   }
 
 }
@@ -457,14 +501,13 @@ header .mobile {
 }
 
 .thesis .right-column .right-item:first-child{
-  background-color: lightgrey;
+  background-color: #c6c1c1;
 }
 
 .thesis .right-column .image-container{
   width: 35%;
   height: 100%;
   overflow: hidden;
-
 }
 
 .thesis .right-column .image-container img{
@@ -502,7 +545,7 @@ footer{
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.5rem 3.0rem 1.5rem;
-  border-top: 0.1rem solid lightgrey;
+  border-top: 0.1rem solid #c6c1c1;
 }
 
 footer p{
